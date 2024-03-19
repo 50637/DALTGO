@@ -8,6 +8,7 @@ encode:This folder contains the program that encodes the protein.
 train.py - This script is the main program.
 metric.py - This script is used to evaulate the model.
 hparam.py - This script is used to initialize parameters.  
+get_GOfeatures.py - This script is used to generate the features of GOterms.  
 [3] Running:     
 --Command line:  
 run train.py script  
