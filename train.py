@@ -224,7 +224,7 @@ if __name__== "__main__":
 	flags.DEFINE_integer("num_heads", 2, "e")
 	flags.DEFINE_integer("num_hidden_layers", 6, "e")
 	#the dimention of vector
-	flags.DEFINE_integer("hidden_size", 80, "e")
+	flags.DEFINE_integer("hidden_size", 128, "e")
 	FLAGS = flags.FLAGS
 	hparams = hparam.params(flags)
 	model1 = DALTGO_model(hparams)
