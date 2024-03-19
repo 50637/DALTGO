@@ -7,7 +7,7 @@ encode:This folder contains the program that encodes the protein.
 train.py - This script is the main program.  
 metric.py - This script is used to evaulate the model.  
 hparam.py - This script is used to initialize parameters.      
-get_GOfeatures.py - This script is used to generate the features of GOterms.
+get_GOfeatures.py - This script is used to generate the features of GOterms.  
 [3] Datasets:
 Each dataset contains two types of files:  
 (1)Files contain the sequence of the protein and the corresponding annotations.   
