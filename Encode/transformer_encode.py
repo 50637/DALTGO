@@ -1,10 +1,5 @@
-# created: 1/9/2020
-# author: Yue Cao
 import numpy as np
 import sys
-
-# add encode path
-#sys.path.insert(0, './Protein_Encode/')
 import attention_layer
 import ffn_layer
 import embedding_layer
