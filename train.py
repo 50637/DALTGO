@@ -41,7 +41,7 @@ def to_int(seq, hparam):
 	return np.array(vec)
 def go_protein_similarity(seq_embed, hparams):
 	#Characteristics of GO terms read from a file
-	sparse_matrix = np.load('ccCAFA3weight80.npy')
+	sparse_matrix = np.load('gofeaturemf128.npy')
 	sparse_matrix *= hparams['hidden_size'] ** 0.5
 	embeddings = tf.constant(np.array(sparse_matrix))
 	embeddings = tf.cast(embeddings, tf.float32)
@@ -68,7 +68,7 @@ class DALTGO_model(object):
 		self.embedding_layer = embedding_layer.EmbeddingSharedWeights(
 					hparams["vocab_size"], hparams["hidden_size"])
 		embedded_inputs = self.embedding_layer(x)
-		lstm_layer = Bidirectional(LSTM(units=40, return_sequences=True))
+		lstm_layer = Bidirectional(LSTM(units=64, return_sequences=True))
 		with tf.name_scope("add_pos_encoding"):
 			length = tf.shape(embedded_inputs)[1]
 			pos_encoding = model_utils.get_position_encoding(
