@@ -59,7 +59,7 @@ class EmbeddingSharedWeights(tf.compat.v1.layers.Layer):
     with tf.name_scope("embedding"):
       from gensim.models.word2vec import Word2Vec
       from gensim.models import KeyedVectors
-      model = KeyedVectors.load_word2vec_format('mf80.txt', binary=False)
+      model = KeyedVectors.load_word2vec_format('protein_language_model.txt', binary=False)
       vocab = list(model.vocab.keys())
       embedding_matrix = model.vectors
       embedding_var = tf.Variable(embedding_matrix)
