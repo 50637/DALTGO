@@ -53,8 +53,7 @@ class EmbeddingSharedWeights(tf.compat.v1.layers.Layer):
       x: An int64 tensor with shape [batch_size, length]
     Returns:
       embeddings: float32 tensor with shape [batch_size, length, embedding_size]
-      padding: float32 tensor with shape [batch_size, length] indicating the
-        locations of the padding tokens in x.
+
     """
     with tf.name_scope("embedding"):
       from gensim.models.word2vec import Word2Vec
